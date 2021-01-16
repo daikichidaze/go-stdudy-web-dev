@@ -1,0 +1,8 @@
+version: '3' # composeファイルのバーション指定
+services:
+  dev: # service名
+    build: . # ビルドに使用するDockerfileがあるディレクトリ指定
+    image: go-stduy
+    volumes:
+      - .:/go/src/ # マウントディレクトリ指定
+    tty: true
